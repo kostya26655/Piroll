@@ -35,6 +35,42 @@ body {
 header {
     background-color: #e9e9e9;     
    }
+   /*
+.section {
+    height: 100vh;
+    background-color: #e9e9e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-btn {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color:#e9e9e9;;
+    position: relative;
+}
+.burger,
+.burger::before,
+.burger::after {
+    position: absolute;
+    top: 50%; margin-top: -1px;
+    width: 30px;
+    height: 2px;
+    background-color: rgb(16, 201, 195);
+}
+.burger::before,
+.burger::after {
+    content:"";
+} 
+.burger::before {
+    transform: translateY(-5px);
+} 
+.burger::after{
+    transform: translateY(5px);
+    
+}
+*/   
 .container {
     margin-left: 7.2%;
     margin-right: 7.2%;
@@ -52,6 +88,13 @@ header {
 .main-navigation-weapper .btn {
     position: absolute;
     padding-top: 38px;
+}
+li .home:hover {
+    background: #7C3FFF;
+    border-color: #7C3FFF;
+	color: #7C3FFF;
+	transition-duration: 5s;
+    transition-timing-function: ease;
 }
 .container h1 {
     font-size: 38px;
@@ -75,6 +118,13 @@ div .bottom {
     border: 15px solid rgb(16, 201, 195);
     background-color: rgb(16, 201, 195);
 
+}
+div .bottom:hover {
+    background: #7C3FFF;
+    border-color: #7C3FFF;
+	color: #7CD1FF;
+	transition-duration: 5s;
+	transition-timing-function: ease;
 }
 main  .aboutus {
     text-align: center;
@@ -142,5 +192,163 @@ section h3 {
     font-size: 18px;
     line-height: 30px;
 }
+.photo div {
+    display: flex;
+    justify-content: space-between;
+}
+.photo div .look {
+    width: 25%; 
+    height: 300px;
+    opacity: 0;
+    background-color: #838383;
+} 
+.work {
+    text-align: center;
+    padding-top: 200px;
+    margin-bottom: 50px;
+}
+.work p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    color: #787878;
+}
+h4 {
+    font-size: 30px;
+    padding-bottom: 35px;
+}
 
-  
+
+/*Всплывающая форма*/
+.modal-login {
+    display: none;
+}
+.modal {
+    position: fixed;
+    color: #838383;
+
+    background-color: #10c9c3;
+    background-position: 0 0;
+    background-repeat: repeat;
+}
+.modal-login {
+    top: 150px;
+    left: 7%;
+    width: 400px;
+    padding: 50px 80px;
+}
+.modal-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 22px;
+    height: 22px;
+    font-size: 0;
+    background-color: #10c9c3;
+    border: 0;
+    cursor: pointer;
+}
+.modal-close::before,
+.modal-close::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    right: 0px;
+    width: 22px;
+    height: 3px;
+    background-color: #7C3FFF;
+}
+.modal-close::before {
+    transform: rotate(45deg);
+}
+.modal-close::after{
+    transform: rotate(-45deg);
+}
+.modal-login h5 {
+margin-bottom: 20px;
+font-size: 38px;
+color: #191919;
+}
+.modal-description {
+    margin-bottom: 20px;
+    color: #191919;
+}
+.login-form p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    
+}
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    box-sizing: border-box;
+    width: 305px;
+    padding: 10px 15px;
+    padding-right: 40px;
+    font-size: 18px;
+    color: #191919;
+    border: 2px  solid #7C3FFF;
+}
+.login-form .login-help {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.login-checkbox {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    color: #191919;
+}
+.login-checkbox:hover,
+.login-checkbox:focus {
+    color: #7C3FFF;
+}
+.login-checkbox input[type="checkbox"] + .checkbox-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    border: 2px solid #7C3FFF;
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.login-checkbox input[type="checkbox"]:focus + .checkbox-indicator {
+    outline: thin dotted;
+    outline: 5px auto;
+}
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator ::before,
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator ::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 1px;
+    width: 22px;
+    height: 100px;
+    background-color: #7C3FFF;
+}
+.modal-close::before {
+    transform: rotate(45deg);
+}
+.modal-close::after{
+    transform: rotate(-45deg);
+}
+.button {
+    font-size: 18px;
+    background: #7C3FFF;
+    border: 15px solid #7C3FFF;
+    color: #10c9c3;
+}
+/*Skript SCC*/
+.modal-show {
+    display: block;
+}

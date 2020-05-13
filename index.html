@@ -9,6 +9,10 @@
     <title>Piroll</title>
 <body>
   <header class="main-header">
+    <!--<div class="section">
+      <a href="#" class="menu-btn"></a>
+      <span class="burger"></span>
+    </div><! -- -->
     <div class="container">
     <nav class="main-navigation"> 
       <div class="main-navigation-weapper"> 
@@ -28,7 +32,7 @@
     20 years of combined experience, and know a thing or two 
     about designing websites and mobile apps.</p>
     <nav class="contactus">
-  <a href ="contact us.html" style="color: #ffffff">
+  <a class="contact_us" href ="contact us.html" style="color: #7C3FFF">
   <div class="bottom">
     <span style="padding :5px 30px 5px 30px;">contact us</span></div>
   </div>
@@ -80,5 +84,76 @@ heaven fruit, dominion she'd won't very all.
           </ul>
         </div>
       </section>
-      
+      <section class="photo">
+        <div class="up-photo">
+          <img src="image/html5.jpg" alt="html5" style="background-color: #dddddd;width: 50%; height: 300px;">
+          <img src="image/css3.jpeg" alt="css3" style="background-color: #838383; width: 50%; height: 300px;">
+        </div>
+        <div class="down-photo">
+          <img src="image/photoshop.jpg" alt="hotoshop" style="background-color: #dddddd; width: 25%; height: 300px;">
+          <img src="image/vscode.jpg" alt="vscode" style="background-color: #252525; width: 25%; height: 300px;">
+          <img src="image/git.jpg" alt="git" style="background-color: #dddddd; width: 25%; height: 300px;">
+          <img class="look" src="image/look.png" alt="photo">
+        </div>
+      </section>
+      <section>
+        <div class="work">
+        <h4>Our Work Process</h4>
+        <p>Was years it seasons was there form he in in them together over that,<br> 
+          third sixth gathered female creeping bearing behold years.</p>
+        </div>
+        <iframe width="100%" height="600" src="https://www.youtube.com/embed/lkQ0LDx9jHs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </section>
   </main>
+  <div class="overlay">
+  <section class="modal modal-login">
+    <h5>Personal Area</h5>
+    <p class="modal-description">Please enter your login and password</p>
+    <form class="login-form" action="" method="">
+    <p>
+      <label class="visually-hidden" for="user-login"></label>
+      <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="login">
+    </p>
+    <p>
+      <label class="visually-hidden" for="user-password"></label>
+      <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="password">
+    </p>
+    <p class="login-help">
+      <label class="login-checkbox">
+        <input  type="checkbox" name="remember" class="visually-hidden" >
+        <span class="checkbox-indicator"></span>
+        remember me
+      </label>
+      <a class="restore" href="#">I forgot password</a>
+    </p>
+    <button class="button" type="submit" style="padding :0px 50px 0px 50px;">
+      sign in</button>
+    </form>
+    <button class="modal-close" type="button" >Close</button>
+  </section>
+</div>
+  <script>
+    var contact=document.querySelector(".contact_us");
+    var popup=document.querySelector(".modal.modal-login");
+    var close=document.querySelector(".modal-close");
+    var login=popup.querySelector("[name=login]");
+    var password=popup.querySelector("[name=password]");
+    var form=popup.querySelector("form");
+
+    contact.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popup.classList.add("modal-show");
+      login.focus ();
+    });
+
+    close.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popup.classList.remove("modal-show");
+    });
+    form.addEventListener("submit", function (evt) {
+      evt.preventDefault();
+      console.log(login.value);
+      console.log(password.value);
+    });
+  </script>
+  </body>
